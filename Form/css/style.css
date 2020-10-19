@@ -1,20 +1,21 @@
-
 input:focus {
-    outline: none;
+  outline: none;
 }
-.form__text--check {
-    border: 1px solid rgb(0, 0, 0);
+
+.form__text--field {
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid #010101;
 }
 
 .form__text--err {
-    border:  1px solid rgb(80, 20, 20);
-    box-shadow: 6px 4px 14px -3px rgba(244, 5, 5, 0.6);
+  border: 2px solid #790909;
+  box-shadow: 6px 4px 14px -3px rgba(244, 5, 5, 0.6);
 }
 
-.form__text-pass--err {
-    color: rgb(255, 0, 0);
+.form__text-invalid--err {
+  color: red;
 }
-
-.form__text-pass--good {
-    color: rgb(72, 150, 0);
+.form__text-invalid--good {
+  color: #489600;
 }
