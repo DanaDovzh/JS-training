@@ -1,0 +1,20 @@
+
+input:focus {
+    outline: none;
+}
+.form__text--check {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.form__text--err {
+    border:  1px solid rgb(80, 20, 20);
+    box-shadow: 6px 4px 14px -3px rgba(244, 5, 5, 0.6);
+}
+
+.form__text-pass--err {
+    color: rgb(255, 0, 0);
+}
+
+.form__text-pass--good {
+    color: rgb(72, 150, 0);
+}
