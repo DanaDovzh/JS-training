@@ -1,13 +1,120 @@
-input:focus
-    outline: none
+$maxWidth: 1440
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
+body 
+ 
+    box-sizing: border-box
+    background-color: rgba(107, 107, 107, 0.733)
+
+.heading 
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent	
+    background-image: url('../img/heading-bg.jpg')
+    background-size: auto
+    background-attachment: unset
+    background-position: 0%
+    font-family: 'Grenze Gotisch'
+    // font-family: 'Sacramento'
+    width: 80%
+    font-size: 80px
+    font-weight: 900
+    animation: clouds-moving infinite 200s
+    animation-fill-mode: forwards
+    animation-play-state: running
+    animation-timing-function: linear
+    text-align: center
+
+@keyframes clouds-moving 
+    0%
+        background-position: 0%	
+    50% 
+        background-position: 100%	
+    100% 
+        background-position: 0%
+	
+.wrapper
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center 
+input:focus,
+input
+    outline: none
+    border: none
+
+.form 
+   
+    width: 30%
+
+
+    @include adaptiv-font(16, 12)
+    @media (max-width: 768px)
+        width: 60%
+    @media (max-width: 425px)
+        width: 100%
+
+.form__info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 30px 50px
+    width: 100%
+    border-radius: 20px
+    background-color: rgb(217, 179, 255)
+    // border: 1px solid rgb(217, 179, 255)
+    box-shadow: inset 0px 0px 33px 16px  rgba(107, 107, 107, 0.733)
+input
+    padding: 0 15px
+    font-family: 'Patrick Hand'
+     font-weight: 400
+    &::placeholder
+        @include adaptiv-font(14, 12)
+label
+    font-family: 'Fredoka One'
+    &[for=gender]
+        font-family: 'Patrick Hand' 
+.form__message 
+    // display: none
+.form__text
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    
+.form__btns
+    display: flex
+    justify-content: flex-start
+.form__btn
+    border-radius: 10px
+    background-color: #f7a2a2
+    padding: 5px 25px
+    color: rgb(59, 59, 59)
+    margin-right: 2em
+    cursor: pointer
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    @include adaptiv-font(16, 12)
+    &:active
+        top: 2px
+        transition-duration: 0.5s
+        transform: translateY(4px) 
+        box-shadow: none 
+        
+    
 .form__text--field
     height: 30px
     border-radius: 10px
-    border: 2px solid rgb(1, 1, 1)
+    width: 40%
+    // border: 1px solid rgb(1, 1, 1)
+    background-color: rgb(240, 232, 232)
+    @media (max-width: 425px)
+        width: 50%
+        height: 20px
 
 .form__text--err 
-    border:  2px solid rgb(121, 9, 9)
+    // border:  1px solid rgb(121, 9, 9)
     box-shadow: 6px 4px 14px -3px rgba(244, 5, 5, 0.6)
 
 
@@ -16,3 +123,8 @@ input:focus
         color: rgb(255, 0, 0)
     &--good 
         color: rgb(72, 150, 0)
+
+.form__message-ok
+        width: 50px
+        height: 50px
+        background-color: black

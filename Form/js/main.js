@@ -1,5 +1,6 @@
 window.onload = function(e) {
     let error  = false;
+    let countWithoutEr = 0;
     let emailValNot = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let inputs = document.querySelectorAll(".form__text--check");
     let messagePass =  document.querySelector("#message-confirm-pass");
@@ -8,6 +9,7 @@ window.onload = function(e) {
     document.querySelector('form').onsubmit = function (e) {
         console.log(password.value, confirmPassword.value);
         for (let i = 0; i < inputs.length; i++) {
+           
             if(inputs[i].value === "") {
                 inputs[i].classList.add("form__text--err");
                 error = true;
@@ -21,6 +23,8 @@ window.onload = function(e) {
                 } else {
                     inputs[i].classList.remove("form__text--err");
                     console.log("3");
+                    
+                    countWithoutEr++;
                 }
             } else if(inputs[i].name ==="email"){
                 if(inputs[i].value.search(emailValNot) === -1) {
@@ -35,6 +39,7 @@ window.onload = function(e) {
                     document.querySelector("#message-email").classList.add("form__text-invalid--good");
                     inputs[i].classList.remove("form__text--err");
                     console.log("5");
+                    countWithoutEr++;
                 }
             } else if(password.value != confirmPassword.value) {
                 messagePass.innerHTML = "  Passwords do not match";
@@ -49,7 +54,9 @@ window.onload = function(e) {
                 messagePass.classList.add("form__text-invalid--good");
                 inputs[i].classList.remove("form__text--err");
                 console.log("7");
-            } else {
+                countWithoutEr++;
+                console.log("countWithoutEr ", countWithoutEr);
+            } else if (countWithoutEr === 3) {
                 error = false;
                 console.log("8");
             }
