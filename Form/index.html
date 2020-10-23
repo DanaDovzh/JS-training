@@ -12,12 +12,20 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="preloader">
+        <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="rgb(237 167 200)"
+            d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+          </path>
+        </svg>
+      </div>
+
     <main class="wrapper">
         <div class="wrapper__heading">
             <h1 class="heading">Info about You</h1>
         </div>
         <div class="wrapper__main">
-            <form get="http://fls.guru/flexbox.html" target="_blank" name="profile" class="form">
+            <form  name="profile" class="form">
                 <section class="form__info">
                 <p class="form__text">
                     <label for="first-name">Your name: </label>
@@ -57,7 +65,7 @@
                 </p>
                 </section>
                 <p class="form__btns">
-                    <input class="form__btn" type="submit" value="Send" class="btn">
+                    <input class="form__btn" type="submit" value="Send" class="btn" >
                     <input class="form__btn" type="reset" value="Reset" class="btn">
                 </p>
             </form>
