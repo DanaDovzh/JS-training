@@ -4,6 +4,44 @@ $maxWidth: 1440
     $maxWidth: $maxWidth - 320
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
+.preloader 
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  overflow: hidden
+  /* фоновый цвет */
+  background: #fff6f6
+  z-index: 1001
+
+
+.preloader__image 
+  position: relative
+  top: 50%
+  left: 50%
+  width: 70px
+  height: 70px
+  margin-top: -35px
+  margin-left: -35px
+  text-align: center
+  animation: preloader-rotate 2s infinite linear
+
+
+@keyframes preloader-rotate 
+  100% 
+    transform: rotate(360deg)
+
+
+.loaded_hiding .preloader 
+  transition: 0.5s opacity
+  opacity: 0
+
+
+.loaded .preloader 
+  display: none
+
+
 body 
     box-sizing: border-box
     background-color: rgba(250, 216, 216, 0.733)
