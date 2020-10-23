@@ -17,17 +17,17 @@
             <h1 class="heading">Info about You</h1>
         </div>
         <div class="wrapper__main">
-            <form get="#hello" name="profile" class="form">
+            <form get="http://fls.guru/flexbox.html" target="_blank" name="profile" class="form">
                 <section class="form__info">
                 <p class="form__text">
                     <label for="first-name">Your name: </label>
                     <input name="first-name" type="text" placeholder="Name" class="form__text--check form__text--field form__text--ok">
-                    <!-- <span class="form__message-ok"></span> -->
+                    <span id="firstName" class="form__message-check"></span>
                 </p>
                 <p class="form__text">
                     <label for="last-name">Your surname: </label>
                     <input type="text" name="last-name" placeholder="Surname" class=" form__text--check form__text--field">
-                    <!-- <span class="form__message-ok"></span> -->
+                    <span id="lastName" class="form__message-check"></span>
                 </p>
                 <p class="form__text"> <label for="genders">Choose gender: </label>
                         <div class="sex">
@@ -35,23 +35,25 @@
                             <input name="gender" type="radio" value="woman"><label for="gender">Female</label>
                             <input checked name="gender" type="radio" value="noname"><label for="gender">Other</label>
                         </div>
+                        <!-- <span class="form__message-check"></span> -->
                 </p>
                 <p class="form__text">
                     <label for="email">Enter your e-mail: </label>
                     <input name="email" type="text" placeholder="Email" class="form__text--check form__text--field">
-                    <!-- <span id="message-email" class="form__message"></span> -->
+                    <span id="message-email" class="form__message-check"></span>
                 </p>
                 <p class="form__text">
                     <label for="nick-name">Create you nick-name: </label>
                     <input name="nick-name" type="text" placeholder="Nick-name" minlength="2" maxlength="10" class="form__text--check form__text--field">
-                    <!-- <span class="form__message-ok"></span> -->
+                    <span class="form__message-check"></span>
                 </p>
                 <p class="form__text"><label for="password">Password: </label>
                     <input name="password" type="password" placeholder="Password" class="form__text--check form__text--field" minlength="6">
+                    <span class="form__message-check"></span>
                 </p>
                 <p class="form__text"><label for="confirm-password">Confirm password: </label>
                     <input name="confirm-password" type="password" placeholder="Password" class="form__text--check form__text--field" minlength="6">
-                    <!-- <span id="message-confirm-pass" class="form__message"></span> -->
+                    <span id="message-confirm-pass" class="form__message-check"></span>
                 </p>
                 </section>
                 <p class="form__btns">

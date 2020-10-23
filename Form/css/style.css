@@ -50,10 +50,11 @@ input {
 }
 
 .form__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 40px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items: baseline;
+  padding: 20px 20px 20px 40px;
   border-radius: 20px;
   background-color: #d9b3ff;
   background-image: url("../img/form-bg.jpg");
@@ -65,7 +66,7 @@ input {
 input {
   padding: 0 15px;
   font-family: "Patrick Hand";
-  font-family-font-weight: 400;
+  font-weight: 400;
 }
 input::placeholder {
   font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
@@ -80,8 +81,10 @@ label[for=gender] {
 }
 
 .form__text {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 45% 44% auto;
+  grid-template-rows: auto;
+  column-gap: 1px;
   align-items: baseline;
 }
 
@@ -127,15 +130,19 @@ label[for=gender] {
   box-shadow: 6px 4px 14px -3px rgba(244, 5, 5, 0.6);
 }
 
-.form__text-invalid--err {
+.form__message-check--err {
   color: red;
+  font-family: "Fredoka One";
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 12px;
+  align-self: center;
 }
-.form__text-invalid--good {
+.form__message-check--good {
   color: #489600;
-}
-
-.form__message-ok {
-  width: 50px;
-  height: 50px;
-  background-color: black;
+  font-family: "Fredoka One";
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 12px;
+  align-self: center;
 }

@@ -52,10 +52,19 @@ input
  
 
 .form__info
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    padding: 30px 40px
+    // display: flex
+    // flex-direction: column
+    // justify-content: space-between
+
+
+    display: grid
+    grid-template-columns: auto
+    grid-template-rows: auto
+    
+    align-items: baseline
+
+
+    padding: 20px 20px 20px 40px
     // width: 100%
     border-radius: 20px
     background-color: rgb(217, 179, 255)
@@ -67,7 +76,7 @@ input
 input
     padding: 0 15px
     font-family: 'Patrick Hand'
-     font-weight: 400
+    font-weight: 400
     &::placeholder
         @include adaptiv-font(14, 12)
 label
@@ -75,11 +84,15 @@ label
     @include adaptiv-font(14, 10)
     &[for=gender]
         font-family: 'Patrick Hand' 
-.form__message 
-    // display: none
+
 .form__text
-    display: flex
-    justify-content: space-between
+    // display: flex
+    // justify-content: space-between
+    // align-items: baseline
+    display: grid
+    grid-template-columns: 45% 44% auto
+    grid-template-rows: auto
+    column-gap: 1px
     align-items: baseline
     
 .form__btns
@@ -120,13 +133,21 @@ label
     box-shadow: 6px 4px 14px -3px rgba(244, 5, 5, 0.6)
 
 
-.form__text-invalid
+.form__message-check
     &--err 
         color: rgb(255, 0, 0)
+        font-family: 'Fredoka One'
+        display: inline-block
+        margin-left: 3px
+        font-size: 12px
+        align-self: center
+        // font-weight: 600
     &--good 
         color: rgb(72, 150, 0)
+        font-family: 'Fredoka One'
+        display: inline-block
+        margin-left: 3px
+        font-size: 12px
+        align-self: center
 
-.form__message-ok
-        width: 50px
-        height: 50px
-        background-color: black
+        
