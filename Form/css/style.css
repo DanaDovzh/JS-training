@@ -39,7 +39,6 @@ body {
   box-sizing: border-box;
   background-color: rgba(250, 216, 216, 0.733);
   background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, rgba(83, 83, 83, 0.46) 0%), url("../img/main-bg.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
